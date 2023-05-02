@@ -1,0 +1,13 @@
+{
+  "name": "node-5xzjsa",
+  "version": "1.0.0",
+  "description": "Github Page of Joven",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "scripts": {
+    "dev": "node .",
+    "start": "node ."
+  }
+}
