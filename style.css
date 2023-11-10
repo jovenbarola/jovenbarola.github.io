@@ -12,7 +12,7 @@ h1.hi-there-name {
   margin-bottom: -5px;
 }
 .color-of-hi-there {
-  color: #002b66;
+  color: #066fff;
 }
 .color-of-myname {
   color: #e6384e;
@@ -64,7 +64,7 @@ h3.short-about-me {
 h2.about-text-color {
   font-family: "Bebas Neue", cursive;
   font-size: 48px;
-  color: #002b66;
+  color: #066fff;
 }
 h3.long-about-me {
   padding-bottom: 40px;
@@ -82,7 +82,7 @@ h2.latest-project {
   font-family: "Bebas Neue", cursive;
   font-size: 48px;
   text-align: center;
-  color: #002b66;
+  color: #066fff;
 }
 span.h2-text-color {
   color: #e6384e;
@@ -119,7 +119,7 @@ span.h2-text-color {
   font-family: "Bebas Neue", cursive;
   font-size: 48px;
   text-align: center;
-  color: #002b66;
+  color: #066fff;
 }
 .skills-p {
   font-family: "Roboto", sans-serif;
@@ -140,7 +140,7 @@ span.h2-text-color {
 }
 .html {
   width: 80%;
-  background-color: #002b66;
+  background-color: #066fff;
 }
 .css {
   width: 70%;
@@ -148,7 +148,7 @@ span.h2-text-color {
 }
 .illustrator {
   width: 80%;
-  background-color: #002b66;
+  background-color: #066fff;
 }
 .photoshop {
   width: 60%;
@@ -160,7 +160,7 @@ span.h2-text-color {
 }
 .critical-thinking {
   width: 75%;
-  background-color: #002b66;
+  background-color: #066fff;
 }
 .problem-solving {
   width: 65%;
@@ -168,7 +168,7 @@ span.h2-text-color {
 }
 .communication {
   width: 75%;
-  background-color: #002b66;
+  background-color: #066fff;
 }
 
 /* Section 5 */
