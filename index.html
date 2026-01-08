@@ -1,186 +1,525 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fullstack Software Engineer from Angeles City, Pampanga Philippines | Joven Barola</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <section class="big-section">
-      <div class="half-width">
-        <h1 class="hi-there-name">
-          <span class="color-of-hi-there">HI THERE, I'M</span><br />
-          <span class="color-of-myname">JOVEN BAROLA</span>
-        </h1>
-        <h3 class="short-about-me">
-          <p>
-            <ul>
-              <li>NOT JUST Another Software Engineer</li>
-              <li>With 10+ Years of software development experience</li>
-              <li>Experienced working with various industry and software applications</li>
-            </ul>
-          </p>
-        </h3>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jBarola.net - Software Engineer Portfolio</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+        }
 
-        <a class="link-button" target="_blank" href="https://www.facebook.com/ben.albarida">Chat to Hire</a>
-      </div>
-      <div class="half-width">
-        <img class="myphoto-s" src="images/jovenb1.png" alt="jovenbarola" />
-      </div>
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: white;
+            padding: 100px 0;
+        }
+
+        .skill-card {
+            transition: transform 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card {
+            transition: transform 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .credential-badge {
+            background: var(--secondary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">jBarola.net</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#credentials">Credentials</a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Joven Barola</h1>
+                    <h2 class="h3 mb-4">Software Engineer</h2>
+                    <p class="lead mb-4">Specializing in Web + Desktop + Mobile Applications, and AI Solutions</p>
+                    <div class="d-flex gap-3">
+                        <a href="#projects" class="btn btn-primary btn-lg">View My Work</a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="images/joven4.jpg" alt="Profile Picture" class="img-fluid rounded-circle" style="max-width: 300px;">
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="big-section section2">
-      <div class="half-width">
-        <img class="myphoto-s" src="images/jovenb2.png" alt="jovenbarola" />
-      </div>
-      <div class="half-width about-s2">
-        <h2 class="about-text-color">ABOUT ME</h2>
-        <h3 class="long-about-me">
-          I enjoy designing elegant and robust software that solves complex issues because I am passionate about the art of coding. I've already worked in a variety of businesses, and I've been working with software development since 2008. I can create software from the ground up, whether it be desktop, mobile, or web-based. I also like dealing with legacy apps in case your firm requires assistance in changing your application to the most recent technology.
-        </h3>
-        <a class="link-button" target="_blank" href="https://flowcv.com/resume/gt9sbpvp41">Download CV</a>
-      </div>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">About Me</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <p class="lead text-center">
+                        I'm a passionate software engineer with expertise in developing comprehensive solutions across multiple platforms.
+                        With years of experience in web, desktop, mobile, and AI technologies, I deliver robust, scalable, and innovative software solutions.
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="banner-s3 big-section-2">
-      <div>
-        <h2 class="latest-project">
-          <span class="h2-text-color">RECENT</span> WORKS
-        </h2>
-      </div>
-      <div class="latest-project-div-style latest-project-div-style-margin">
-        <img
-            class="latest-project-photo"
-            src="https://ik.imagekit.io/jovenb/logos/ParkEase%20-%20Logo.jpg?updatedAt=1702296991092"
-            alt="Parkease - Parking Management Software" />
-        <h3 class="latest-project-text">Parkease - Parking Management Software</h3>
-        <p>
-          This is a parking management system; it is pre-packaged software that may be white-labeled. This can assist small to medium-sized businesses in tracking sales in their parking lots.
-        </p>
-        <a href="" class="btn-regular text-center">Try It now!</a>
-      </div>
-      <div class="latest-project-div-style">
-        <img
-          class="latest-project-photo"
-          src="https://ik.imagekit.io/jovenb/logos/JOYMAC%20-%20Food%20Logo.jpg?updatedAt=1702296973795"
-          alt="JoyMac Self Ordering"
-        />
-        <h3 class="latest-project-text">JoyMac Self Ordering (For Kiosk Display)</h3>
-        <p>
-          This is a simple self-ordering system. It is ready-made software that may be white-labeled. This can be implemented into your POS for the primary purpose of accepting customer orders, similar to what you might find in a well-known fast-food restaurant. However, the major goal is to assist small to medium-sized restaurants or food businesses in maximizing the potential of self-ordering.
-        </p>
-        <a href="" class="btn-regular text-center">Try It now!</a>
-      </div>
-      <div class="latest-project-div-style">
-        <img
-          class="latest-project-photo"
-          src="https://ik.imagekit.io/jovenb/logos/Queue%20Management%20-%20Logo.jpg?updatedAt=1702299321835"
-          alt="Queue Management System"
-        />
-        <h3 class="latest-project-text">Queue Management System</h3>
-        <p>
-          This is a simple queue management system. That can be used in your small-to-medium-sized business to manage customer queues. Ideal for use in Payment Centers, Check-Out Counters, Bank Tellers, and a variety of other settings.
-        </p>
-        <a href="" class="btn-regular text-center">Try It now!</a>
-      </div>
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Technical Skills</h2>
+            <div class="row g-4">
+                
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card card h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-globe fa-3x text-primary mb-3"></i>
+                                <h5 class="card-title">Web Development</h5>
+                                <div class="mt-3"><span class="credential-badge">PHP</span><span class="credential-badge">Laravel</span><span class="credential-badge">JavaScript</span><span class="credential-badge">React</span><span class="credential-badge">Vue.js</span><span class="credential-badge">Node.js</span><span class="credential-badge">HTML5</span><span class="credential-badge">CSS3</span><span class="credential-badge">Bootstrap</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card card h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-desktop fa-3x text-primary mb-3"></i>
+                                <h5 class="card-title">Desktop Applications</h5>
+                                <div class="mt-3"><span class="credential-badge">C# .NET</span><span class="credential-badge">WPF</span><span class="credential-badge">WinForms</span><span class="credential-badge">JavaFX</span><span class="credential-badge">Electron</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card card h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-mobile-alt fa-3x text-primary mb-3"></i>
+                                <h5 class="card-title">Mobile Development</h5>
+                                <div class="mt-3"><span class="credential-badge">React Native</span><span class="credential-badge">Flutter</span><span class="credential-badge">Android (Java/Kotlin)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card card h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-brain fa-3x text-primary mb-3"></i>
+                                <h5 class="card-title">AI</h5>
+                                <div class="mt-3"><span class="credential-badge">Python</span><span class="credential-badge">MCP</span><span class="credential-badge">OpenCV (Computer Vision)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card card h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-database fa-3x text-primary mb-3"></i>
+                                <h5 class="card-title">Database & Backend</h5>
+                                <div class="mt-3"><span class="credential-badge">Microsoft SQL Server</span><span class="credential-badge">MySQL</span><span class="credential-badge">PostgreSQL</span><span class="credential-badge">MongoDB</span><span class="credential-badge">Redis</span><span class="credential-badge">RESTful APIs</span><span class="credential-badge">GraphQL</span><span class="credential-badge">Firebase</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card card h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-cloud fa-3x text-primary mb-3"></i>
+                                <h5 class="card-title">DevOps & Cloud</h5>
+                                <div class="mt-3"><span class="credential-badge">AWS</span><span class="credential-badge">Docker</span><span class="credential-badge">Kubernetes</span><span class="credential-badge">CI/CD</span><span class="credential-badge">Git</span><span class="credential-badge">Linux</span><span class="credential-badge">Nginx</span><span class="credential-badge">Apache</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>            </div>
+        </div>
     </section>
 
-    <section class="big-section">
-      <h2 class="my-skills"><span class="h2-text-color">SKILLSETS</span></h2>
-      <div class="half-width">
-        <p class="skills-p">HTML</p>
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
         <div class="container">
-          <div class="skills html">100%</div>
+            <h2 class="text-center section-title">Featured Projects</h2>
+            <div class="row g-4">
+                
+                    <div class="col-md-6 col-lg-4">
+                        <div class="project-card card h-100">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2">Web + AI</span>
+                                <h5 class="card-title">E-Commerce Platform</h5>
+                                <p class="card-text">Full-stack e-commerce solution with AI-powered recommendations</p>
+                                <div class="mt-3"><span class="badge bg-secondary me-1 mb-1">PHP</span><span class="badge bg-secondary me-1 mb-1">Laravel</span><span class="badge bg-secondary me-1 mb-1">React</span><span class="badge bg-secondary me-1 mb-1">MySQL</span><span class="badge bg-secondary me-1 mb-1">TensorFlow</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="project-card card h-100">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2">Desktop</span>
+                                <h5 class="card-title">Inventory Management System</h5>
+                                <p class="card-text">Desktop application for enterprise inventory tracking and management</p>
+                                <div class="mt-3"><span class="badge bg-secondary me-1 mb-1">C#</span><span class="badge bg-secondary me-1 mb-1">.NET</span><span class="badge bg-secondary me-1 mb-1">SQL Server</span><span class="badge bg-secondary me-1 mb-1">WPF</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="project-card card h-100">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2">Mobile + AI</span>
+                                <h5 class="card-title">Fitness Tracking App</h5>
+                                <p class="card-text">Mobile application with AI-based workout recommendations</p>
+                                <div class="mt-3"><span class="badge bg-secondary me-1 mb-1">React Native</span><span class="badge bg-secondary me-1 mb-1">Node.js</span><span class="badge bg-secondary me-1 mb-1">MongoDB</span><span class="badge bg-secondary me-1 mb-1">Python</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="project-card card h-100">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2">AI</span>
+                                <h5 class="card-title">Customer Service Chatbot</h5>
+                                <p class="card-text">AI-powered chatbot for automated customer support</p>
+                                <div class="mt-3"><span class="badge bg-secondary me-1 mb-1">Python</span><span class="badge bg-secondary me-1 mb-1">TensorFlow</span><span class="badge bg-secondary me-1 mb-1">NLP</span><span class="badge bg-secondary me-1 mb-1">Flask</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="project-card card h-100">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2">Web</span>
+                                <h5 class="card-title">Real-time Analytics Dashboard</h5>
+                                <p class="card-text">Web-based dashboard for real-time business intelligence</p>
+                                <div class="mt-3"><span class="badge bg-secondary me-1 mb-1">Vue.js</span><span class="badge bg-secondary me-1 mb-1">Node.js</span><span class="badge bg-secondary me-1 mb-1">WebSocket</span><span class="badge bg-secondary me-1 mb-1">D3.js</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="project-card card h-100">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2">Cross-Platform</span>
+                                <h5 class="card-title">Cross-Platform Task Manager</h5>
+                                <p class="card-text">Sync tasks across web, desktop, and mobile platforms</p>
+                                <div class="mt-3"><span class="badge bg-secondary me-1 mb-1">Electron</span><span class="badge bg-secondary me-1 mb-1">React</span><span class="badge bg-secondary me-1 mb-1">Firebase</span><span class="badge bg-secondary me-1 mb-1">React Native</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>            </div>
         </div>
-
-        <p class="skills-p">CSS (Bootstrap 4.x,5.x, TailwindCSS)</p>
-        <div class="container">
-          <div class="skills css">100%</div>
-        </div>
-
-        <p class="skills-p">JAVASCRIPT (jQuery, KendoUI, Svelte, AngularJS 1.x and much more)</p>
-        <div class="container">
-          <div class="skills css">100%</div>
-        </div>
-
-        <p class="skills-p">ADOBE ILLUSTRATOR</p>
-        <div class="container">
-          <div class="skills illustrator">90%</div>
-        </div>
-
-        <p class="skills-p">ADOBE PHOTOSHOP</p>
-        <div class="container">
-          <div class="skills photoshop">90%</div>
-        </div>
-
-        <p class="skills-p">DEVOPS (GitHub Actions, CodePipeline, ElasticBeanstalk)</p>
-        <div class="container">
-          <div class="skills communication">100%</div>
-        </div>
-      </div>
-      <div class="half-width">
-        <p class="skills-p">DATABASE DESIGN AND OPTIMIZATION</p>
-        <div class="container">
-          <div class="skills team-management">100%</div>
-        </div>
-
-        <p class="skills-p">ASP.NET 3.5 to 4.5 (.NET FRAMEWORK)</p>
-        <div class="container">
-          <div class="skills critical-thinking">100%</div>
-        </div>
-
-        <p class="skills-p">ASP.NET MVC, BLAZOR (.NET CORE)</p>
-        <div class="container">
-          <div class="skills critical-thinking">80%</div>
-        </div>
-
-        <p class="skills-p">PHP (Laravel, CodeIgniter, Yii2, Smarty)</p>
-        <div class="container">
-          <div class="skills critical-thinking">100%</div>
-        </div>
-
-        <p class="skills-p">COLDFUSION (Lucee, Adobe CFML)</p>
-        <div class="container">
-          <div class="skills problem-solving">100%</div>
-        </div>
-
-        <p class="skills-p">CLOUD SERVER MANAGEMENT (VPS, Amazon Webservices, Linode, Heroku)</p>
-        <div class="container">
-          <div class="skills communication">100%</div>
-        </div>
-      </div>
     </section>
-    <section class="small-section">
-      <div class="div-size-s4">
-        <div class="work-inquiry-s4">WANT TO HIRE ME?</div>
-        <div class="lets-chat-s4">
-          <a
-            class="link-button"
-            target="_blank"
-            href="https://www.facebook.com/ben.albarida/"
-          >
-            Let's Chat
-          </a>
+
+    <!-- Credentials Section -->
+    <section id="credentials" class="py-5 bg-light d-none">
+        <div class="container">
+            <h2 class="text-center section-title">Credentials & Proof of Expertise</h2>
+
+            <div class="row">
+                <!-- Certifications -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-primary text-white">
+                            <h4><i class="fas fa-certificate me-2"></i>Certifications</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-check-circle text-success me-3"></i>
+                                    <span>AWS Certified Solutions Architect</span>
+                                </div><div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-check-circle text-success me-3"></i>
+                                    <span>Microsoft Certified: Azure Developer Associate</span>
+                                </div><div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-check-circle text-success me-3"></i>
+                                    <span>Google Professional Machine Learning Engineer</span>
+                                </div><div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-check-circle text-success me-3"></i>
+                                    <span>Oracle Certified Java Programmer</span>
+                                </div><div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-check-circle text-success me-3"></i>
+                                    <span>Scrum Master Certified (SMC)</span>
+                                </div><div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-check-circle text-success me-3"></i>
+                                    <span>TensorFlow Developer Certificate</span>
+                                </div>                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-success text-white">
+                            <h4><i class="fas fa-graduation-cap me-2"></i>Education</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-university text-primary me-3"></i>
+                                    <span>Bachelor of Science in Computer Science - University of Technology</span>
+                                </div><div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-university text-primary me-3"></i>
+                                    <span>Master of Science in Artificial Intelligence - Tech Institute</span>
+                                </div><div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-university text-primary me-3"></i>
+                                    <span>Data Science Specialization - Coursera</span>
+                                </div><div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-university text-primary me-3"></i>
+                                    <span>Full Stack Web Development Bootcamp</span>
+                                </div>                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Proof -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header bg-info text-white">
+                            <h4><i class="fas fa-code me-2"></i>Technical Proof & Experience</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5>Open Source Contributions</h5>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fab fa-github me-2"></i>50+ repositories on GitHub</li>
+                                        <li><i class="fas fa-code-branch me-2"></i>Contributions to major frameworks</li>
+                                        <li><i class="fas fa-users me-2"></i>Active in developer communities</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Professional Experience</h5>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-briefcase me-2"></i>5+ years in software development</li>
+                                        <li><i class="fas fa-project-diagram me-2"></i>Led 20+ successful projects</li>
+                                        <li><i class="fas fa-chart-line me-2"></i>Mentored junior developers</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Code Samples -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            <h4><i class="fas fa-laptop-code me-2"></i>Live Demos & Code Samples</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row text-center">
+                                <div class="col-md-3 mb-3">
+                                    <a href="#" class="btn btn-outline-primary w-100">
+                                        <i class="fab fa-github me-2"></i>GitHub Profile
+                                    </a>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <a href="#" class="btn btn-outline-success w-100">
+                                        <i class="fab fa-codepen me-2"></i>CodePen
+                                    </a>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <a href="#" class="btn btn-outline-warning w-100">
+                                        <i class="fas fa-play-circle me-2"></i>Live Demos
+                                    </a>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <a href="#" class="btn btn-outline-info w-100">
+                                        <i class="fab fa-jsfiddle me-2"></i>JSFiddle
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
-    <footer>
-      <p class="stay-connected">LET'S STAY CONNECTED</p>
-      <p class="footer-mail">developer@jbarola.net</p>
-      <!-- <div class="footer-image-position">
-        <img class="footer-image-size" src="icons/dribble.png" alt="dribble" />
-        <img class="footer-image-size" src="icons/behance.png" alt="behance" />
-        <img
-          class="footer-image-size"
-          src="icons/instagram.png"
-          alt="instagram"
-        />
-      </div> -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 d-none">
+        <div class="container">
+            <h2 class="text-center section-title">Get In Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Freesoftware Section -->
+    <section id="freesoftware" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Free Softwares</h2>
+            <div class="row g-4">
+                
+                    <div class="col-md-6 col-lg-4">
+                        <div class="project-card card h-100">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2">Desktop</span>
+                                <h5 class="card-title">Baysik - Inventory Management System</h5>
+                                <p class="card-text">Desktop application for enterprise inventory tracking and management</p>
+                                <div class="mt-3"><span class="badge bg-secondary me-1 mb-1">C#</span><span class="badge bg-secondary me-1 mb-1">.NET</span><span class="badge bg-secondary me-1 mb-1">SQL Server</span><span class="badge bg-secondary me-1 mb-1">WPF</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="project-card card h-100">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2">Desktop</span>
+                                <h5 class="card-title">CodeVault - Developer Snippet Manager</h5>
+                                <p class="card-text">A lightweight code snippet organizer with syntax highlighting, tagging system, and quick search. Features export to multiple formats and keyboard shortcuts for efficiency.</p>
+                                <div class="mt-3"><span class="badge bg-secondary me-1 mb-1">C# .NET</span><span class="badge bg-secondary me-1 mb-1">WPF</span><span class="badge bg-secondary me-1 mb-1">SQLite</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="project-card card h-100">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2">Desktop</span>
+                                <h5 class="card-title">FileSync Pro - Cross-Platform File Synchronizer</h5>
+                                <p class="card-text">Automatic file synchronization between multiple folders with real-time monitoring. Perfect for developers working across multiple machines or backup scenarios.</p>
+                                <div class="mt-3"><span class="badge bg-secondary me-1 mb-1">C# .NET</span><span class="badge bg-secondary me-1 mb-1">WinForm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="project-card card h-100">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2">Desktop</span>
+                                <h5 class="card-title">PassGwardya - Offline Password Manager</h5>
+                                <p class="card-text">Local-first password manager with military-grade encryption. No cloud dependency, completely offline operation with master password protection.</p>
+                                <div class="mt-3"><span class="badge bg-secondary me-1 mb-1">C# .NET</span><span class="badge bg-secondary me-1 mb-1">WinForm</span><span class="badge bg-secondary me-1 mb-1">AES Encryption</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>jBarola.net</h5>
+                    <p>Software Engineer & AI Developer</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin fa-2x"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-github fa-2x"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p>&copy; 2024 jBarola.net. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
-  </body>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
 </html>
